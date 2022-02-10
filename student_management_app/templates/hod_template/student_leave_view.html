@@ -1,7 +1,7 @@
 {% extends 'hod_template/base_template.html' %}
 
 {% block page_title %}
-    Leave Apply by Students
+  Reclamations
 {% endblock page_title %}
 
 {% block main_content %}
@@ -16,7 +16,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Leave Apply by Students</h3>
+                            <h3 class="card-title">Reclamation</h3>
                         </div>
                         <!-- /.card-header -->
 
@@ -25,10 +25,10 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Student ID</th>
-                                    <th>Student Name</th>
-                                    <th>Leave Date</th>
-                                    <th>Leave Message</th>
+                                    <th>ID_Etudiant</th>
+                                    <th> Nom_Etudiant</th>
+                                    <th>Date_reclamation</th>
+                                    <th>Message</th>
                                     <th>Applied On</th>
                                     <th>Action</th>
                                 </tr>
@@ -45,12 +45,12 @@
                                     <td>{{ leave.created_at }}</td>
                                     <td>
                                         {% if leave.leave_status == 0 %}
-                                            <a href="{% url 'student_leave_approve' leave_id=leave.id %}" class="btn btn-success">Approve</a>
-                                            <a href="{% url 'student_leave_reject' leave_id=leave.id %}" class="btn btn-danger">Reject</a>
+                                            <a href="{% url 'student_leave_approve' leave_id=leave.id %}" class="btn btn-success">validé</a>
+                                            <a href="{% url 'student_leave_reject' leave_id=leave.id %}" class="btn btn-danger">Rejeté</a>
                                         {% elif leave.leave_status == 1 %}
-                                            <button class="btn btn-warning" disabled="disabled">Approved</button>
+                                            <button class="btn btn-warning" disabled="disabled">validé</button>
                                         {% else %}
-                                            <button class="btn btn-danger" disabled="disabled">Rejected</button>
+                                            <button class="btn btn-danger" disabled="disabled">Rejeté</button>
                                         {% endif %}
                                         
                                     </td>

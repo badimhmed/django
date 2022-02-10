@@ -1,7 +1,7 @@
 {% extends 'hod_template/base_template.html' %}
 
 {% block page_title %}
-    Manage Subjects
+    Manage matieres
 {% endblock page_title %}
 
 {% block main_content %}
@@ -11,7 +11,7 @@
 <section class="content">
         <div class="container-fluid">
 
-            <a class="btn btn-primary" href="{% url 'add_subject' %}" role="button">+ Add Subject</a> <br/>&nbsp;
+            <a class="btn btn-primary" href="{% url 'add_subject' %}" role="button">+ Ajouter matiere</a> <br/>&nbsp;
 
             {% if messages %}
                                 <div class="form-group">
@@ -42,7 +42,7 @@
                     <!-- general form elements -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Subject Details</h3>
+                            <h3 class="card-title">matiere Details</h3>
 
                             <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
@@ -60,11 +60,11 @@
                             <thead>
                                 <tr>
                                 <th>ID</th>
-                                <th>Subject Name</th>
-                                <th>Course</th>
-                                <th>Staff</th>
-                                <th>Created At</th>
-                                <th>Updated At</th>
+                                <th>Nom</th>
+                                <th>Filiere</th>
+                                <th>departement</th>
+                                <th>Date_creation</th>
+                                <th>Date_modification</th>
                                 <th>Action</th>
                                 </tr>
                             </thead>
@@ -78,8 +78,8 @@
                                 <td>{{ subject.created_at }}</td>
                                 <td>{{ subject.updated_at }}</td>
                                 <td>
-                                    <a href="{% url 'edit_subject' subject.id %}" class="btn btn-success">Edit</a> 
-                                    <a href="{% url 'delete_subject' subject.id %}" class="btn btn-danger">Delete</a>
+                                    <a href="{% url 'edit_subject' subject.id %}" class="btn btn-success">modifier</a> 
+                                    <a href="{% url 'delete_subject' subject.id %}" class="btn btn-danger">suprimer</a>
                                 </td>
                                 </tr>
                                 {% endfor %}

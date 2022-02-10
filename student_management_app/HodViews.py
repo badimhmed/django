@@ -62,7 +62,7 @@ def admin_home(request):
     for student in students:
         attendance = AttendanceReport.objects.filter(student_id=student.id, status=True).count()
         absent = AttendanceReport.objects.filter(student_id=student.id, status=False).count()
-        leaves = LeaveReportStudent.objects.filter(student_id=student.id, leave_status=1).count()
+        leaves = LeaveReportStudent.objects.filter(student_id=stsudent.id, leave_status=1).count()
         student_attendance_present_list.append(attendance)
         student_attendance_leave_list.append(leaves+absent)
         student_name_list.append(student.admin.first_name)
@@ -470,10 +470,10 @@ def edit_student_save(request):
                 # Delete student_id SESSION after the data is updated
                 del request.session['student_id']
 
-                messages.success(request, "Student Updated Successfully!")
+                messages.success(request, "modifier avec succees")
                 return redirect('/edit_student/'+student_id)
             except:
-                messages.success(request, "Failed to Uupdate Student.")
+                messages.success(request, "ne peut pas modifier.")
                 return redirect('/edit_student/'+student_id)
         else:
             return redirect('/edit_student/'+student_id)
@@ -483,10 +483,10 @@ def delete_student(request, student_id):
     student = Students.objects.get(admin=student_id)
     try:
         student.delete()
-        messages.success(request, "Student Deleted Successfully.")
+        messages.success(request, "suprimer avec succees.")
         return redirect('manage_student')
     except:
-        messages.error(request, "Failed to Delete Student.")
+        messages.error(request, "vous ne peut pas suprimer!")
         return redirect('manage_student')
 
 
@@ -498,6 +498,10 @@ def add_subject(request):
         "staffs": staffs
     }
     return render(request, 'hod_template/add_subject_template.html', context)
+
+
+
+
 
 
 

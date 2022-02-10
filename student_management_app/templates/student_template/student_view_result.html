@@ -25,10 +25,10 @@
                                 <table class="table">
                                     <thead class="thead-light">
                                     <tr>
-                                        <th>#ID</th>
-                                        <th>Subject</th>
-                                        <th>Assignments Marks</th>
-                                        <th>Exam Marks</th>
+                                        <th>ID</th>
+                                        <th>matiere</th>
+                                        <th>note devoir</th>
+                                        <th>note Examen</th>
                                         <th>status</th>
                                     </tr>
                                     </thead>
@@ -41,9 +41,9 @@
                                         <td>{{ row.subject_exam_marks }}</td>
                                         <td>
                                             {% if row.subject_exam_marks >= 40 %}
-                                                <span class="alert alert-success">Pass</span>
+                                                <span class="alert alert-success">admis</span>
                                             {% else %}
-                                                <span class="alert alert-danger">Fail</span>
+                                                <span class="alert alert-danger">Ratrapage</span>
                                             {% endif %}
                                         </td>
                                     </tr>

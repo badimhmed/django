@@ -14,12 +14,12 @@
                 <div class="inner">
                   <h3>{{ all_student_count }}</h3>
 
-                  <p>Total Students</p>
+                  <p>Total Etudiants</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="{% url 'manage_student' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'manage_student' %}" class="small-box-footer">voir plus <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -29,12 +29,12 @@
                 <div class="inner">
                   <h3>{{ staff_count }}</h3>
 
-                  <p>Total Staffs</p>
+                  <p>Total departemant</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="{% url 'manage_staff' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'manage_staff' %}" class="small-box-footer">voir plus <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -45,12 +45,12 @@
                 <div class="inner">
                   <h3>{{ course_count }}</h3>
 
-                  <p>Total Courses</p>
+                  <p>Total Filiere</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="{% url 'manage_course' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'manage_course' %}" class="small-box-footer">voir plus <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -60,12 +60,12 @@
                 <div class="inner">
                   <h3>{{ subject_count }}</h3>
 
-                  <p>Total Subjects</p>
+                  <p>Total matiere</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="{% url 'manage_subject' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{% url 'manage_subject' %}" class="small-box-footer">voir plus <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -97,7 +97,7 @@
               <!-- DONUT CHART -->
               <div class="card card-danger">
                 <div class="card-header">
-                  <h3 class="card-title">Total Subjects in Each Course</h3>
+                  <h3 class="card-title">Total matiere dans filiere</h3>
 
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -121,7 +121,7 @@
               <!-- PIE CHART -->
               <div class="card card-info">
                 <div class="card-header">
-                  <h3 class="card-title">Total Student in Each Course</h3>
+                  <h3 class="card-title">Total etudiant dans filiere</h3>
 
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -140,7 +140,7 @@
               <!-- PIE CHART -->
               <div class="card card-info">
                 <div class="card-header">
-                  <h3 class="card-title">Total Students in Each Subject</h3>
+                  <h3 class="card-title">Total Etudiant dans matiere</h3>
 
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -156,66 +156,7 @@
             </div>
           </div>
 
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- BAR CHART -->
-            <div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">Staff Attendance vs Leave</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="chart">
-                  <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                </div>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-
-
-          <div class="col-lg-6">
-            
-          </div>
         
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- BAR CHART -->
-            <div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">Student Attendance vs Leave</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="chart">
-                  <canvas id="barChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                </div>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-
-
-          <div class="col-lg-6">
-            
-          </div>
-        
-        </div>
-
         </div><!-- /.container-fluid -->
       </section>
 

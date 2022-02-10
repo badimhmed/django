@@ -1,7 +1,7 @@
 {% extends 'hod_template/base_template.html' %}
 
 {% block page_title %}
-    Manage Staff
+    Manage departement
 {% endblock page_title %}
 
 {% block main_content %}
@@ -11,7 +11,7 @@
 <section class="content">
         <div class="container-fluid">
 
-            <a class="btn btn-primary" href="{% url 'add_staff' %}" role="button">+ Add Staff</a> <br/>&nbsp;
+            <a class="btn btn-primary" href="{% url 'add_staff' %}" role="button">+ Ajouter departement</a> <br/>&nbsp;
 
             {% if messages %}
                                 <div class="form-group">
@@ -44,7 +44,7 @@
                     <!-- general form elements -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Staff Details</h3>
+                            <h3 class="card-title">departement Details</h3>
 
                             <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
@@ -62,8 +62,8 @@
                             <thead>
                                 <tr>
                                 <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th> Name</th>
+                                <th>prefiation</th>
                                 <th>Username</th>
                                 <th>Email</th>
                                 <th>Address</th>

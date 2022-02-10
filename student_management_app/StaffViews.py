@@ -324,7 +324,7 @@ def staff_add_result(request):
 
 def staff_add_result_save(request):
     if request.method != "POST":
-        messages.error(request, "Invalid Method")
+        messages.error(request, "methode non valide")
         return redirect('staff_add_result')
     else:
         student_admin_id = request.POST.get('student_list')

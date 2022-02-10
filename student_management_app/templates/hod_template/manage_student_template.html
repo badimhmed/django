@@ -1,7 +1,7 @@
 {% extends 'hod_template/base_template.html' %}
 
 {% block page_title %}
-    Manage Student
+    Manage Etudiants
 {% endblock page_title %}
 
 {% block main_content %}
@@ -11,7 +11,7 @@
 <section class="content">
         <div class="container-fluid">
 
-            <a class="btn btn-primary" href="{% url 'add_student' %}" role="button">+ Add Student</a> <br/>&nbsp;
+            <a class="btn btn-primary" href="{% url 'add_student' %}" role="button">+ Add Etudiant</a> <br/>&nbsp;
             
             {% if messages %}
                                 <div class="form-group">
@@ -37,23 +37,17 @@
                                 </div>
                                 {% endif %}
 
+
+
             <div class="row">
 
                 <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Student Details</h3>
-
-                            <div class="card-tools">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                <div class="input-group-append">
-                                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-                            </div>
+                            <h3 class="card-title">Etudiant Details</h3>
+                            
+  
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
@@ -61,16 +55,16 @@
                             <thead>
                                 <tr>
                                 <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
+                                <th>Nom</th>
+                                <th>prenom</th>
                                 <th>Username</th>
                                 <th>Email</th>
-                                <th>Address</th>
+                                <th>Addresse</th>
                                 <th>Gender</th>
-                                <th>Profile Pic</th>
+                                <th>Profile</th>
                                 <th>Start Year</th>
                                 <th>End Year</th>
-                                <th>Course</th>
+                                <th>Filiere</th>
                                 <th>Last Login</th>
                                 <th>Date Joined</th>
                                 <th>Action</th>
@@ -93,8 +87,8 @@
                                 <td>{{ student.admin.last_login }}</td>
                                 <td>{{ student.admin.date_joined }}</td>
                                 <td>
-                                    <a href="{% url 'edit_student' student.admin.id %}" class="btn btn-success">Edit</a> 
-                                    <a href="{% url 'delete_student' student.admin.id %}" class="btn btn-danger">Delete</a>
+                                    <a href="{% url 'edit_student' student.admin.id %}" class="btn btn-success">modifier</a> 
+                                    <a href="{% url 'delete_student' student.admin.id %}" class="btn btn-danger">suprimer</a>
                                 </td>
                                 </tr>
                                 {% endfor %}
