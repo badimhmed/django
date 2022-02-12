@@ -112,10 +112,10 @@ def student_apply_leave_save(request):
         try:
             leave_report = LeaveReportStudent(student_id=student_obj, leave_date=leave_date, leave_message=leave_message, leave_status=0)
             leave_report.save()
-            messages.success(request, "Applied for Leave.")
+            messages.success(request, "Envoyer avec succes.")
             return redirect('student_apply_leave')
         except:
-            messages.error(request, "Failed to Apply Leave")
+            messages.error(request, "la message est rejeter")
             return redirect('student_apply_leave')
 
 
